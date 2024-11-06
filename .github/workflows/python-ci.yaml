@@ -10,3 +10,13 @@ jobs:
     steps: #first telling to github
       - name: Checkout code #clone repository
         uses: actions/checkout@v3 #from this github location
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with: 
+          python-version: '3.9'
+      - name: Install dependencies   #Install  dependancies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt    
+          
+
