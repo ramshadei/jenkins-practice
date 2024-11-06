@@ -1,0 +1,12 @@
+name: CI workflow
+
+on: 
+  push: 
+    branches:
+      - main
+jobs: 
+  build:  #name of job
+    runs-on: ubuntu-latest    #label of agent
+    steps: #first telling to github
+      - name: Checkout code #clone repository
+        uses: actions/checkout@v3 #from this github location
